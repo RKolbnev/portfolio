@@ -62,6 +62,13 @@ gulp.task('js', () => {
     .on("end", browsersync.reload);
 })
 
+gulp.task("img", () => {
+  return gulp
+    .src("./src/img/*")
+    .pipe(gulp.dest("./dist/img"))
+    .pipe(browsersync.stream());
+});
+
 gulp.task('watch', () => {
   browsersync.init({
     server: './dist/',
@@ -69,12 +76,13 @@ gulp.task('watch', () => {
     notify: true
   });
 
+  gulp.watch('./src/img/*', gulp.parallel('img'));
   gulp.watch('./src/index.html', gulp.parallel('html'));
   gulp.watch('./src/sass/**/*.sass', gulp.parallel('css'));
   gulp.watch('./src/js/**/*.js', gulp.parallel('js'));
 })
 
-gulp.task('dev', gulp.parallel('html', 'css', 'js'));
+gulp.task('dev', gulp.parallel('html', 'css', 'js', 'img'));
 
 gulp.task('default', gulp.parallel('watch', 'dev'));
 
