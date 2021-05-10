@@ -3,7 +3,6 @@ src/
 *.json
 *.js
 
-
 # Logs
 logs
 *.log
