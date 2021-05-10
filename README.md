@@ -5,7 +5,7 @@
 ![Exapmle](./simpleTrello.png)
 
 
-[GitHub](https://github.com/RKolbnev/simple_Trello)
+[GitHub]](https://github.com/RKolbnev/simple_Trello)
 
 
 [Hosting](https://simpletrello-88eaf.web.app/)
