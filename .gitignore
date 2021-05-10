@@ -1,6 +1,10 @@
+dist/
+src/
+*.json
+*.js
+
 
 # Logs
-
 logs
 *.log
 npm-debug.log*
