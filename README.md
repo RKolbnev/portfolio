@@ -32,13 +32,15 @@
 - [GitHub](https://github.com/RKolbnev/simple_Trello)
 - [Firebase](https://simpletrello-88eaf.web.app/)
 ***
-### ToDo
+
+### Todo
 #### Простой вариант системы котроля задач
 ##### Используемые технологии:
-- JS
+- Vue 3
 - Sass
 
-![Example](./todo.png)
+![Exapmle](./todo.png)
 
-- [GitHub](https://github.com/RKolbnev/ToDo_JS)
-- [Firebase](https://todo-59b4a.web.app/)
+- [GitHub](https://github.com/RKolbnev/todo_vue)
+- [Firebase](https://todo-vue-e2829.web.app/)
+***
