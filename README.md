@@ -2,20 +2,20 @@
 ---
 ### Simon the game
 ##### Используемые технологии:
-- Vue.js
+- Vue 3
 - Sass
 
-![Exapmle](./simon-the-game.png)
+![Exapmle](./src/img/simon-the-game.png)
 
 - [GitHub](https://github.com/RKolbnev/simon_the_game)
 - [Firebase](https://simon-53ab4.web.app/)
 ***
 ### Форма создания клиента.
 ##### Используемые технологии:
-- Vue.js
+- Vue 3
 - Sass
 
-![Exapmle](./form.png)
+![Exapmle](./src/img/form.png)
 
 - [GitHub](https://github.com/RKolbnev/medods_test)
 - [Firebase](https://form-802dc.web.app/)
@@ -24,10 +24,11 @@
 ### Simple Trello
 #### Данный проект является упрощенной версией известной системы управления проектами Trello.
 ##### Используемые технологии:
-- JS
+- JavaScript
 - Sass
+- Firebase
 
-![Exapmle](./simpleTrello.png)
+![Exapmle](./src/img/simpleTrello.png)
 
 - [GitHub](https://github.com/RKolbnev/simple_Trello)
 - [Firebase](https://simpletrello-88eaf.web.app/)
@@ -38,8 +39,9 @@
 ##### Используемые технологии:
 - Vue 3
 - Sass
+- Firebase
 
-![Exapmle](./todo.png)
+![Exapmle](./src/img/todo.png)
 
 - [GitHub](https://github.com/RKolbnev/todo_vue)
 - [Firebase](https://todo-vue-e2829.web.app/)
