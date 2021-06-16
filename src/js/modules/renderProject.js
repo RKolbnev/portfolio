@@ -12,7 +12,7 @@ const renderProject = (data, key) => {
     </div>
     <div class="project__link">
       <a href="${data.github}"><img src="./img/github_logo2.png" alt="github"></a>
-      <a href="${data.firebase}"><img src="./img/firebase__logo.png" alt=""></a>
+      <a href="${data.firebase}"><img src="./img/firebase__logo.png" alt="firebase"></a>
     </div>
   `;
   document.querySelector('.projects__wrap').append(project);
