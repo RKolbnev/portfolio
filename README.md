@@ -1,5 +1,20 @@
 ## Портфолио
 ---
+
+
+### Chatter
+#### Чат для общения.
+##### Используемые технологии:
+- JavaScript
+- Sass
+- Firebase
+
+![Exapmle](./src/img/chatter1.png)
+
+- [GitHub](https://github.com/RKolbnev/chatter")
+- [Firebase](https://chatter-df15a.web.app/)
+***
+
 ### Simon the game
 ##### Используемые технологии:
 - Vue 3
@@ -35,7 +50,7 @@
 ***
 
 ### Todo
-#### Простой вариант системы котроля задач
+#### Простой вариант системы контроля задач
 ##### Используемые технологии:
 - Vue 3
 - Sass

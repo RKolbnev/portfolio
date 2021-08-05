@@ -1,14 +1,4 @@
 const data = {
-  trello: {
-    title: "Упрощенная версия Trello",
-    main_img: "simpleTrello",
-    github: "https://github.com/RKolbnev/simple_Trello",
-    firebase: "https://simpletrello-88eaf.web.app/",
-    details: {
-      used_technologies: ["JavaScript", "Sass", "Firebase"],
-      images: ["trello1", "trello2", "trello3"],
-    },
-  },
   chatter: {
     title: "Чат",
     main_img: "chatter1",
@@ -19,7 +9,16 @@ const data = {
       images: ["chatter0", "chatter1", "chatter2", "chatter3", "chatter4"],
     },
   },
-
+  trello: {
+    title: "Упрощенная версия Trello",
+    main_img: "simpleTrello",
+    github: "https://github.com/RKolbnev/simple_Trello",
+    firebase: "https://simpletrello-88eaf.web.app/",
+    details: {
+      used_technologies: ["JavaScript", "Sass", "Firebase"],
+      images: ["trello1", "trello2", "trello3"],
+    },
+  },
   todo: {
     title: "Простой вариант системы котроля задач",
     main_img: "todo",
