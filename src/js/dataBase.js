@@ -9,6 +9,16 @@ const data = {
       images: ["trello1", "trello2", "trello3"],
     },
   },
+  chatter: {
+    title: "Чат",
+    main_img: "chatter1",
+    github: "https://github.com/RKolbnev/chatter",
+    firebase: "https://chatter-df15a.web.app/",
+    details: {
+      used_technologies: ["Vue 3", "Sass", "Firebase"],
+      images: ["chatter0", "chatter1", "chatter2", "chatter3", "chatter4"],
+    },
+  },
 
   todo: {
     title: "Простой вариант системы котроля задач",
