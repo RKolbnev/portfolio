@@ -201,7 +201,9 @@ var openProject = function openProject() {
 };
 
 function createModal(project) {
-  var modal = document.createElement("div");
+  if (document.querySelector('.modal')) return;
+  var modal = document.createElement("div"); // modal.style.marginTop = window.pageYOffset + 50 + 'px';
+
   modal.classList.add("modal__bg");
   modal.innerHTML = "\n    <div class=\"modal\">\n      <div class=\"slider\">\n        <button class=\"arrow prev\"></button>\n        <ul class=\"images\"></ul>\n        <button class=\"arrow next\"></button>\n      </div>\n      <div class=\"modal__info\">\n        <div class=\"info__used\">\n          <span>\u0418\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0435\u043C\u044B\u0435 \u0442\u0435\u0445\u043D\u043E\u043B\u043E\u0433\u0438\u0438:</span>\n          <span> ".concat(project.details.used_technologies.join(' - '), "</span>\n        </div>\n        <div class=\"info__link\">\n          <a href=\"").concat(project.github, "\"><img src=\"./img/github_logo2.png\" alt=\"github\"></a>\n          <a href=\"").concat(project.firebase, "\"><img src=\"./img/firebase__logo.png\" alt=\"firebase\"></a>\n        </div>\n      </div>\n    </div>\n  ");
   var images = project.details.images;
@@ -223,29 +225,30 @@ function modalHandler(modal) {
     if (e.target === modal) modal.remove();
   });
   var images = modal.querySelector('.images');
+  var width = +window.getComputedStyle(modal.querySelector("LI")).width.replace('px', '');
   var step = 0;
   var current = 0;
   next.addEventListener('click', function () {
     if (current < images.children.length - 1) {
-      step -= 75;
+      step -= width;
       current += 1;
     } else {
       step = 0;
       current = 0;
     }
 
-    images.style.marginLeft = "".concat(step, "vw");
+    images.style.marginLeft = "".concat(step, "px");
   });
   prev.addEventListener('click', function () {
     if (current === 0) {
       current = images.children.length - 1;
-      step = -(current * 75);
+      step = -(current * width);
     } else {
       current -= 1;
-      step += 75;
+      step += width;
     }
 
-    images.style.marginLeft = "".concat(step, "vw");
+    images.style.marginLeft = "".concat(step, "px");
   });
 }
 

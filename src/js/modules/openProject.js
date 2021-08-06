@@ -13,7 +13,9 @@ const openProject = (className = 'project') => {
 
 
 function createModal(project) {
+  if (document.querySelector('.modal')) return;
   const modal = document.createElement("div");
+  // modal.style.marginTop = window.pageYOffset + 50 + 'px';
   modal.classList.add("modal__bg");
   modal.innerHTML = `
     <div class="modal">
@@ -57,27 +59,28 @@ function modalHandler(modal) {
   });
 
   const images = modal.querySelector('.images');
+  const width = +window.getComputedStyle(modal.querySelector("LI")).width.replace('px', '');
   let step = 0;
   let current = 0;
   next.addEventListener('click', () => {
     if (current < images.children.length - 1) {
-      step -= 75;
+      step -= width;
       current += 1;
     } else {
       step = 0;
       current = 0;
     }
-    images.style.marginLeft = `${step}vw`;
+    images.style.marginLeft = `${step}px`;
   })
   prev.addEventListener('click', () => {
     if (current === 0) {
       current = images.children.length - 1;
-      step = -(current * 75);
+      step = -(current * width);
     } else {
       current -= 1;
-      step += 75;
+      step += width;
     }
-    images.style.marginLeft = `${step}vw`
+    images.style.marginLeft = `${step}px`
   })
 }
 

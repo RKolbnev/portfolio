@@ -1,13 +1,12 @@
 .modal__bg
   display: flex
-  align-items: flex-start
+  align-items: center
   justify-content: center
-  position: absolute
+  position: fixed
   top: 0
   left: 0
   width: stretch
-  height: 91.3vh
-  padding: 2vw
+  height: stretch
   background-color: #21202091
   overflow-y: auto
   &::-webkit-scrollbar
@@ -40,6 +39,7 @@
   list-style: none
   transition: all 0.5s
   & li
+    height: fit-content
     & img
       width: 75vw
 .arrow
