@@ -96,16 +96,6 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 var data = {
-  trello: {
-    title: "Упрощенная версия Trello",
-    main_img: "simpleTrello",
-    github: "https://github.com/RKolbnev/simple_Trello",
-    firebase: "https://simpletrello-88eaf.web.app/",
-    details: {
-      used_technologies: ["JavaScript", "Sass", "Firebase"],
-      images: ["trello1", "trello2", "trello3"]
-    }
-  },
   chatter: {
     title: "Чат",
     main_img: "chatter1",
@@ -114,6 +104,16 @@ var data = {
     details: {
       used_technologies: ["Vue 3", "Sass", "Firebase"],
       images: ["chatter0", "chatter1", "chatter2", "chatter3", "chatter4"]
+    }
+  },
+  trello: {
+    title: "Упрощенная версия Trello",
+    main_img: "simpleTrello",
+    github: "https://github.com/RKolbnev/simple_Trello",
+    firebase: "https://simpletrello-88eaf.web.app/",
+    details: {
+      used_technologies: ["JavaScript", "Sass", "Firebase"],
+      images: ["trello1", "trello2", "trello3"]
     }
   },
   todo: {
