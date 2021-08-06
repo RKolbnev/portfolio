@@ -15,7 +15,6 @@ const openProject = (className = 'project') => {
 function createModal(project) {
   if (document.querySelector('.modal')) return;
   const modal = document.createElement("div");
-  // modal.style.marginTop = window.pageYOffset + 50 + 'px';
   modal.classList.add("modal__bg");
   modal.innerHTML = `
     <div class="modal">
@@ -55,6 +54,7 @@ function modalHandler(modal) {
   const prev = modal.querySelector('.prev');
 
   modal.addEventListener('click', (e) => {
+    console.log(e.target);
     if (e.target === modal) modal.remove()
   });
 

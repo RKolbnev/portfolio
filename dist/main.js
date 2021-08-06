@@ -202,8 +202,7 @@ var openProject = function openProject() {
 
 function createModal(project) {
   if (document.querySelector('.modal')) return;
-  var modal = document.createElement("div"); // modal.style.marginTop = window.pageYOffset + 50 + 'px';
-
+  var modal = document.createElement("div");
   modal.classList.add("modal__bg");
   modal.innerHTML = "\n    <div class=\"modal\">\n      <div class=\"slider\">\n        <button class=\"arrow prev\"></button>\n        <ul class=\"images\"></ul>\n        <button class=\"arrow next\"></button>\n      </div>\n      <div class=\"modal__info\">\n        <div class=\"info__used\">\n          <span>\u0418\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0435\u043C\u044B\u0435 \u0442\u0435\u0445\u043D\u043E\u043B\u043E\u0433\u0438\u0438:</span>\n          <span> ".concat(project.details.used_technologies.join(' - '), "</span>\n        </div>\n        <div class=\"info__link\">\n          <a href=\"").concat(project.github, "\"><img src=\"./img/github_logo2.png\" alt=\"github\"></a>\n          <a href=\"").concat(project.firebase, "\"><img src=\"./img/firebase__logo.png\" alt=\"firebase\"></a>\n        </div>\n      </div>\n    </div>\n  ");
   var images = project.details.images;
@@ -222,6 +221,7 @@ function modalHandler(modal) {
   var next = modal.querySelector('.next');
   var prev = modal.querySelector('.prev');
   modal.addEventListener('click', function (e) {
+    console.log(e.target);
     if (e.target === modal) modal.remove();
   });
   var images = modal.querySelector('.images');
