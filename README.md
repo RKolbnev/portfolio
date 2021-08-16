@@ -1,13 +1,28 @@
 ## Портфолио
 ---
 
+### SPA для создание моделей нейронных сетей
+##### Используемые технологии:
+- Vue
+- VueX
+- Vue-Router
+- Vue-Simple-Flowchart
+
+![Exapmle](./src/img/dataset0.png)
+
+- [GitHub](https://github.com/RKolbnev/dataset")
+- [Firebase](https://dataset-test-64a39.web.app)
 
 ### Chatter
 #### Чат для общения.
 ##### Используемые технологии:
-- JavaScript
+- Vue
+- VueX
+- Vue-Router
 - Sass
 - Firebase
+- Firestore
+- Firebase.auth
 
 ![Exapmle](./src/img/chatter1.png)
 
