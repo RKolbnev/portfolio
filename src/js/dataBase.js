@@ -3,7 +3,7 @@ const data = {
     title: "SPA для создание моделей нейросетей",
     main_img: "dataset0",
     github: "https://github.com/RKolbnev/dataset",
-    firebase: "https://dataset-test-64a39.web.app/neuralNetwork",
+    firebase: "https://dataset-test-64a39.web.app",
     details: {
       used_technologies: ["Vue 3", "Sass", "Vue-Router", "Vue-Simple-Flowchart"],
       images: ["dataset0", "dataset1"],
