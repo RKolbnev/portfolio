@@ -1,11 +1,21 @@
 const data = {
+  dataset: {
+    title: "SPA для создание моделей нейросетей",
+    main_img: "dataset0",
+    github: "https://github.com/RKolbnev/dataset",
+    firebase: "https://dataset-test-64a39.web.app/neuralNetwork",
+    details: {
+      used_technologies: ["Vue 3", "Sass", "Vue-Router", "Vue-Simple-Flowchart"],
+      images: ["dataset0", "dataset1"],
+    },
+  },
   chatter: {
     title: "Чат",
     main_img: "chatter1",
     github: "https://github.com/RKolbnev/chatter",
     firebase: "https://chatter-df15a.web.app/",
     details: {
-      used_technologies: ["Vue 3", "Sass", "Firebase"],
+      used_technologies: ["Vue 3", "Vue-Router", "VueX", "Sass", "Firebase"],
       images: ["chatter0", "chatter1", "chatter2", "chatter3", "chatter4"],
     },
   },
