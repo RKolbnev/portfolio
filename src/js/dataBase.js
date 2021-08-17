@@ -16,7 +16,7 @@ const data = {
     firebase: "https://chatter-df15a.web.app/",
     details: {
       used_technologies: ["Vue 3", "Vue-Router", "VueX", "Sass", "Firebase"],
-      images: ["chatter0", "chatter1", "chatter2", "chatter3", "chatter4"],
+      images: ["chatter0", "chatter1", "chatter2", "chatter3", "chatter4", "chatter5"],
     },
   },
   trello: {
