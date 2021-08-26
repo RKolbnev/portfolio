@@ -96,18 +96,48 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 var data = {
-  dataset: {
-    title: "SPA для создание моделей нейросетей",
-    main_img: "dataset0",
-    github: "https://github.com/RKolbnev/dataset",
-    firebase: "https://dataset-test-64a39.web.app",
+  // form: {
+  //   title: "Форма создания клиента",
+  //   main_img: "form",
+  //   github: "https://github.com/RKolbnev/medods_test",
+  //   firebase: "https://form-802dc.web.app/",
+  //   details: {
+  //     used_technologies: ["Vue 3", "Sass"],
+  //     images: ["form"],
+  //   },
+  // },
+  //   simon: {
+  //   title: "Simon the game",
+  //   main_img: "simon-the-game",
+  //   github: "https://github.com/RKolbnev/simon_the_game",
+  //   firebase: "https://simon-53ab4.web.app/",
+  //   details: {
+  //     used_technologies: ["Vue 3", "Sass"],
+  //     images: ["simon-the-game"],
+  //   },
+  // },
+  //   todo: {
+  //   title: "ToDo",
+  //   main_img: "todo",
+  //   github: "https://github.com/RKolbnev/todo_vue",
+  //   firebase: "https://todo-vue-e2829.web.app/",
+  //   details: {
+  //     used_technologies: ["Vue 3", "Sass", "Firebase"],
+  //     images: ["todo"],
+  //   },
+  // },
+  trello: {
+    title: "Simple Trello",
+    main_img: "trello0",
+    github: "https://github.com/RKolbnev/simple_Trello",
+    firebase: "https://simpletrello-88eaf.web.app/",
     details: {
-      used_technologies: ["Vue 3", "Sass", "Vue-Router", "Vue-Simple-Flowchart"],
-      images: ["dataset0", "dataset1"]
+      used_technologies: ["JavaScript", "Sass", "Firebase"],
+      images: ["trello0", "trello1", "trello2", "trello3"]
     }
   },
   chatter: {
-    title: "Чат",
+    title: "Chatter",
     main_img: "chatter1",
     github: "https://github.com/RKolbnev/chatter",
     firebase: "https://chatter-df15a.web.app/",
@@ -116,44 +146,14 @@ var data = {
       images: ["chatter0", "chatter1", "chatter2", "chatter3", "chatter4", "chatter5"]
     }
   },
-  trello: {
-    title: "Упрощенная версия Trello",
-    main_img: "simpleTrello",
-    github: "https://github.com/RKolbnev/simple_Trello",
-    firebase: "https://simpletrello-88eaf.web.app/",
+  dataset: {
+    title: "SPA для создание моделей нейронных сетей",
+    main_img: "dataset0",
+    github: "https://github.com/RKolbnev/dataset",
+    firebase: "https://dataset-test-64a39.web.app",
     details: {
-      used_technologies: ["JavaScript", "Sass", "Firebase"],
-      images: ["trello1", "trello2", "trello3"]
-    }
-  },
-  todo: {
-    title: "Простой вариант системы котроля задач",
-    main_img: "todo",
-    github: "https://github.com/RKolbnev/todo_vue",
-    firebase: "https://todo-vue-e2829.web.app/",
-    details: {
-      used_technologies: ["Vue 3", "Sass", "Firebase"],
-      images: ["todo"]
-    }
-  },
-  simon: {
-    title: "Игра Simon",
-    main_img: "simon-the-game",
-    github: "https://github.com/RKolbnev/simon_the_game",
-    firebase: "https://simon-53ab4.web.app/",
-    details: {
-      used_technologies: ["Vue 3", "Sass"],
-      images: ["simon-the-game"]
-    }
-  },
-  form: {
-    title: "Форма создания клиента",
-    main_img: "form",
-    github: "https://github.com/RKolbnev/medods_test",
-    firebase: "https://form-802dc.web.app/",
-    details: {
-      used_technologies: ["Vue 3", "Sass"],
-      images: ["form"]
+      used_technologies: ["Vue 3", "Sass", "Vue-Router", "Vue-Simple-Flowchart"],
+      images: ["dataset0", "dataset1"]
     }
   }
 };
@@ -172,97 +172,13 @@ var data = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _dataBase__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./dataBase */ "./src/js/dataBase.js");
 /* harmony import */ var _modules_renderProject__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/renderProject */ "./src/js/modules/renderProject.js");
-/* harmony import */ var _modules_openProject__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/openProject */ "./src/js/modules/openProject.js");
-
 
 
 window.addEventListener("DOMContentLoaded", function () {
   for (var key in _dataBase__WEBPACK_IMPORTED_MODULE_0__["default"]) {
     Object(_modules_renderProject__WEBPACK_IMPORTED_MODULE_1__["default"])(_dataBase__WEBPACK_IMPORTED_MODULE_0__["default"][key], key);
   }
-
-  Object(_modules_openProject__WEBPACK_IMPORTED_MODULE_2__["default"])();
 });
-
-/***/ }),
-
-/***/ "./src/js/modules/openProject.js":
-/*!***************************************!*\
-  !*** ./src/js/modules/openProject.js ***!
-  \***************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _dataBase__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../dataBase */ "./src/js/dataBase.js");
-
-
-var openProject = function openProject() {
-  var className = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'project';
-  var parent = document.querySelector('.projects__wrap');
-  parent.addEventListener('click', function (e) {
-    if (e.target.closest(".".concat(className))) {
-      var elem = e.target.closest(".".concat(className));
-      var project = _dataBase__WEBPACK_IMPORTED_MODULE_0__["default"][elem.getAttribute("id")];
-      createModal(project);
-    }
-  });
-};
-
-function createModal(project) {
-  if (document.querySelector('.modal')) return;
-  var modal = document.createElement("div");
-  modal.classList.add("modal__bg");
-  modal.innerHTML = "\n    <div class=\"modal\">\n      <div class=\"slider\">\n        <button class=\"arrow prev\"></button>\n        <ul class=\"images\"></ul>\n        <button class=\"arrow next\"></button>\n      </div>\n      <div class=\"modal__info\">\n        <div class=\"info__used\">\n          <span>\u0418\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0435\u043C\u044B\u0435 \u0442\u0435\u0445\u043D\u043E\u043B\u043E\u0433\u0438\u0438:</span>\n          <span> ".concat(project.details.used_technologies.join(' - '), "</span>\n        </div>\n        <div class=\"info__link\">\n          <a href=\"").concat(project.github, "\"><img src=\"./img/github_logo2.png\" alt=\"github\"></a>\n          <a href=\"").concat(project.firebase, "\"><img src=\"./img/firebase__logo.png\" alt=\"firebase\"></a>\n        </div>\n      </div>\n    </div>\n  ");
-  var images = project.details.images;
-
-  for (var i = 0; i < images.length; i++) {
-    var li = document.createElement('li');
-    li.innerHTML = "\n      <img src=\"./img/".concat(images[i], ".png\" alt=\"\u041A\u0430\u0440\u0442\u0438\u043D\u043A\u0430").concat(i + 1, "\">\n    ");
-    modal.querySelector('.images').append(li);
-  }
-
-  document.querySelector('body').append(modal);
-  modalHandler(modal);
-}
-
-function modalHandler(modal) {
-  var next = modal.querySelector('.next');
-  var prev = modal.querySelector('.prev');
-  modal.addEventListener('click', function (e) {
-    console.log(e.target);
-    if (e.target === modal) modal.remove();
-  });
-  var images = modal.querySelector('.images');
-  var width = +window.getComputedStyle(modal.querySelector("LI")).width.replace('px', '');
-  var step = 0;
-  var current = 0;
-  next.addEventListener('click', function () {
-    if (current < images.children.length - 1) {
-      step -= width;
-      current += 1;
-    } else {
-      step = 0;
-      current = 0;
-    }
-
-    images.style.marginLeft = "".concat(step, "px");
-  });
-  prev.addEventListener('click', function () {
-    if (current === 0) {
-      current = images.children.length - 1;
-      step = -(current * width);
-    } else {
-      current -= 1;
-      step += width;
-    }
-
-    images.style.marginLeft = "".concat(step, "px");
-  });
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (openProject);
 
 /***/ }),
 
@@ -275,15 +191,56 @@ function modalHandler(modal) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 var renderProject = function renderProject(data, key) {
+  var wrap = document.querySelector(".projects__wrap");
+  var number = wrap.childElementCount >= 10 ? wrap.childElementCount + 1 : "0".concat(wrap.childElementCount + 1);
   var project = document.createElement('div');
   project.classList.add('project');
   project.setAttribute('id', key);
-  project.innerHTML = "\n    <div class=\"project__img\">\n      <img src=\"./img/".concat(data.main_img, ".png\" alt=\"").concat(data.title, "\">\n    </div>\n    <div class=\"project__desc\">\n      ").concat(data.title, "\n    </div>\n    <div class=\"project__link\">\n      <a href=\"").concat(data.github, "\"><img src=\"./img/github_logo2.png\" alt=\"github\"></a>\n      <a href=\"").concat(data.firebase, "\"><img src=\"./img/firebase__logo.png\" alt=\"firebase\"></a>\n    </div>\n  ");
-  document.querySelector('.projects__wrap').append(project);
+  project.innerHTML = "\n    <div class=\"project__img\">\n      <ul></ul>\n    </div>\n    <div class=\"project__info\">\n      <div class=\"number\">".concat(number, "</div>\n      <span class=\"desc\">").concat(data.title, "</span>\n      <div class=\"project__link\">\n        <a href=\"").concat(data.github, "\">View code</a>\n        <a href=\"").concat(data.firebase, "\">View project</a>\n      </div>\n    </div>\n  ");
+  var imgWrap = project.querySelector('.project__img > UL');
+
+  var _iterator = _createForOfIteratorHelper(data.details.images),
+      _step;
+
+  try {
+    for (_iterator.s(); !(_step = _iterator.n()).done;) {
+      var i = _step.value;
+      var img = document.createElement('li');
+      img.innerHTML = "<img src=\"./img/".concat(i, ".png\" alt=\"\u041A\u0430\u0440\u0442\u0438\u043D\u043A\u0430").concat(i + 1, "\">");
+      imgWrap.append(img);
+    }
+  } catch (err) {
+    _iterator.e(err);
+  } finally {
+    _iterator.f();
+  }
+
+  wrap.append(project);
+  autoslider(imgWrap);
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (renderProject);
+
+function autoslider(wrap) {
+  setInterval(function () {
+    var currentMargin = +wrap.style.marginLeft.replace('px', '');
+    var step = +window.getComputedStyle(wrap.children[0]).width.replace('px', '');
+    var count = wrap.childElementCount;
+
+    if (Math.abs(currentMargin) < step * (count - 1)) {
+      wrap.style.marginLeft = +wrap.style.marginLeft.replace('px', '') - step + "px";
+    } else {
+      wrap.style.marginLeft = 0 + "px";
+    }
+  }, 5000);
+}
 
 /***/ })
 

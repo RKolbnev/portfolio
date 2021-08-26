@@ -75,6 +75,13 @@ gulp.task("img", () => {
     .pipe(browsersync.stream());
 });
 
+gulp.task("icon", () => {
+  return gulp
+    .src('./src/font-awesome/**/**')
+    .pipe(gulp.dest("./dist/icons"))
+    .pipe(browsersync.stream());
+})
+
 gulp.task('watch', () => {
   browsersync.init({
     server: './dist/',
@@ -88,7 +95,7 @@ gulp.task('watch', () => {
   gulp.watch('./src/js/**/*.js', gulp.parallel('js'));
 })
 
-gulp.task('dev', gulp.parallel('html', 'css', 'js', 'img', 'fonts'));
+gulp.task('dev', gulp.parallel('html', 'css', 'icon', 'js', 'img', 'fonts'));
 
 gulp.task('default', gulp.parallel('watch', 'dev'));
 

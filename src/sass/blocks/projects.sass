@@ -1,52 +1,133 @@
+$width: 55rem
+
 .projects
   width: stretch
-  height: fit-content
-  min-height: 78vh
-  padding: 2rem 4rem
+  padding: 2rem 3rem
   &__wrap
     display: flex
-    flex-wrap: wrap
-    align-items: flex-start
-    justify-content: space-evenly
+    flex-direction: column-reverse
+    align-items: center
+    & div.project
+      &:nth-child(odd)
+        margin-left: auto
+        margin-right: 10vw
+        div.number
+          right: 0
+          transform: translate(20%, -25%)
+        & div.project__link, span.desc
+          left: 10%
+      &:nth-child(even)
+        margin-right: auto
+        margin-left: 10vw
+        div.number
+          left: 0
+          transform: translate(-20%, -25%)
+        & div.project__link, span.desc
+          right: 10%
+      &:last-child
+        margin-top: 0
 
 .project
-  cursor: pointer
-  display: flex
-  flex-direction: column
-  align-items: center
-  margin: 0.5rem
-  margin-bottom: 1.8rem
-  overflow: hidden
-  border-radius: 0.5rem
-  color: #fff
-  background-color: lighten($header, 5%)
-  transition: all 0.5s
+  position: relative
+  width: $width
+  height: fit-content
+  margin-top: -8%
+  background-color: #00000000
+  &:hover
+    z-index: 999
+    & div.project__info
+      overflow: visible
+      width: 100%
+      transition: 0.5s
+      & div.number, & span.desc, & div.project__link > a
+        transition: 1.5s
+        opacity: 1
   &__img
-    height: 8rem
+    position: relative
     overflow: hidden
-    & img
-      width: 18rem
-  &__desc
-    padding: 0.5rem
-    font-family: Roboto-Regular, Arial, sans-serif
-  &__link
-    z-index: -1
+    margin-left: 0
+    & ul
+      display: flex
+      flex-direction: row
+      flex-wrap: nowrap
+      width: stretch
+      height: fit-content
+      padding: 0
+      margin: 0
+      list-style: none
+      transition: margin 0.5s
+      & li
+        outline: none
+        width: $width
+        padding: 0
+        margin: auto
+        & img
+          width: $width
+  &__info
+    position: absolute
+    overflow: hidden
+    top: 0
+    left: 0
     display: flex
     align-items: center
     justify-content: center
-    width: 55%
-    margin-top: -10%
-    transition: all 0.5s
-    & a > img
-      width: 3.5rem
-      margin: 0.2rem
-    & a:last-child > img
-      width: 4.5rem
-      margin-left: 0.5rem
-  &:hover
-    transition: all 0.5s
-    margin-bottom: 0
-    .project__link
-      transition: all 0.5s
-      z-index: 0
-      margin-top: 0
+    width: 0%
+    height: 100%
+    font-family: Roboto-Regular, Arial, sans-serif
+    background-color: #000000a2
+    transition: 0.3s
+    & div.number
+      position: absolute
+      opacity: 0
+      top: 0
+      font-size: 10rem
+      font-style: italic
+      font-family: Roboto
+      color: #fff
+    & span.desc
+      position: absolute
+      top: 50%
+      opacity: 0
+      font-size: 2rem
+  &__link
+    position: absolute
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+    top: 70%
+    width: 40%
+    min-width: 15rem
+    & a
+      position: relative
+      overflow: hidden
+      text-decoration: none
+      outline: none
+      opacity: 0
+      padding: 0.2rem 1rem
+      font-size: 1.3rem
+      font-family: Roboto-Regular
+      color: #fff
+      border: 1px solid #fff
+      transition: 1s all ease
+      &:visited
+        color: #fff
+      &::before
+        content: ''
+        position: absolute
+        width: 0
+        height: 100%
+        top: 0
+        left: 50%
+        background-color: red
+        transition: all 0.6s ease
+      &:hover
+        border-color: #ff0000
+        color: #ff0000
+        background-color: #fff
+        transition: all 0.6s ease
+        &::before
+          width: 100%
+          left: 0
+          background-color: transparent
+
