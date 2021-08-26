@@ -96,36 +96,36 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 var data = {
-  // form: {
-  //   title: "Форма создания клиента",
-  //   main_img: "form",
-  //   github: "https://github.com/RKolbnev/medods_test",
-  //   firebase: "https://form-802dc.web.app/",
-  //   details: {
-  //     used_technologies: ["Vue 3", "Sass"],
-  //     images: ["form"],
-  //   },
-  // },
-  //   simon: {
-  //   title: "Simon the game",
-  //   main_img: "simon-the-game",
-  //   github: "https://github.com/RKolbnev/simon_the_game",
-  //   firebase: "https://simon-53ab4.web.app/",
-  //   details: {
-  //     used_technologies: ["Vue 3", "Sass"],
-  //     images: ["simon-the-game"],
-  //   },
-  // },
-  //   todo: {
-  //   title: "ToDo",
-  //   main_img: "todo",
-  //   github: "https://github.com/RKolbnev/todo_vue",
-  //   firebase: "https://todo-vue-e2829.web.app/",
-  //   details: {
-  //     used_technologies: ["Vue 3", "Sass", "Firebase"],
-  //     images: ["todo"],
-  //   },
-  // },
+  form: {
+    title: "Форма создания клиента",
+    main_img: "form",
+    github: "https://github.com/RKolbnev/medods_test",
+    firebase: "https://form-802dc.web.app/",
+    details: {
+      used_technologies: ["Vue 3", "Sass"],
+      images: ["form"]
+    }
+  },
+  simon: {
+    title: "Simon the game",
+    main_img: "simon-the-game",
+    github: "https://github.com/RKolbnev/simon_the_game",
+    firebase: "https://simon-53ab4.web.app/",
+    details: {
+      used_technologies: ["Vue 3", "Sass"],
+      images: ["simon-the-game"]
+    }
+  },
+  todo: {
+    title: "ToDo",
+    main_img: "todo",
+    github: "https://github.com/RKolbnev/todo_vue",
+    firebase: "https://todo-vue-e2829.web.app/",
+    details: {
+      used_technologies: ["Vue 3", "Sass", "Firebase"],
+      images: ["todo"]
+    }
+  },
   trello: {
     title: "Simple Trello",
     main_img: "trello0",
