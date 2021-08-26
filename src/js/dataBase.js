@@ -50,7 +50,7 @@ const data = {
     },
   },
     dataset: {
-    title: "SPA для создание моделей нейронных сетей",
+    title: "SPA для создания моделей нейронных сетей",
     main_img: "dataset0",
     github: "https://github.com/RKolbnev/dataset",
     firebase: "https://dataset-test-64a39.web.app",

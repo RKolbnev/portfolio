@@ -15,7 +15,9 @@ $width: 55rem
           right: 0
           transform: translate(20%, -25%)
         & div.project__link, span.desc
-          left: 10%
+          left: 5vw
+          text-align: left
+          justify-content: flex-start
       &:nth-child(even)
         margin-right: auto
         margin-left: 10vw
@@ -23,7 +25,9 @@ $width: 55rem
           left: 0
           transform: translate(-20%, -25%)
         & div.project__link, span.desc
-          right: 10%
+          right: 5vw
+          text-align: right
+          justify-content: flex-end
       &:last-child
         margin-top: 0
 
@@ -80,13 +84,13 @@ $width: 55rem
       position: absolute
       opacity: 0
       top: 0
-      font-size: 10rem
+      font-size: 10vw
       font-style: italic
       font-family: Roboto
       color: #fff
     & span.desc
       position: absolute
-      top: 50%
+      top: auto
       opacity: 0
       font-size: 2rem
   &__link
@@ -94,11 +98,12 @@ $width: 55rem
     display: flex
     flex-direction: row
     align-items: center
-    justify-content: space-between
     top: 70%
-    width: 40%
+    width: 80%
     min-width: 15rem
     & a
+      &:first-of-type
+        margin-right: 1rem
       position: relative
       overflow: hidden
       text-decoration: none
